@@ -1,0 +1,1371 @@
+.auth-container {
+  height: 100vh;
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+  background: white;
+  padding: 0;
+  margin: 0;
+}
+
+.auth-card {
+  background: white;
+  border-radius: 0;
+  box-shadow: none;
+  padding: 0;
+  width: 100%;
+  max-width: none;
+  overflow: hidden;
+  height: 100%;
+}
+
+.auth-content {
+  display: flex;
+  height: 100vh;
+}
+
+.auth-image {
+  width: 50%;
+  height: 100vh;
+  position: fixed;
+  left: 0;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f8f9fa;
+}
+
+.auth-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.auth-form-section {
+  width: 50%;
+  margin-left: 50%;
+  padding: 1.5rem;
+  padding-left: 4rem;
+  padding-top: 1.5rem;
+  padding-bottom: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  min-height: 100vh;
+  overflow-y: auto;
+  box-sizing: border-box;
+}
+
+.auth-form-section>* {
+  width: 100%;
+  max-width: 400px;
+}
+
+.auth-header {
+  text-align: left;
+  margin-bottom: 2rem;
+}
+
+.header-with-logo {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.taalos-logo {
+  width: 90px;
+  height: 90px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+.auth-header h1 {
+  color: #000;
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  font-weight: 400;
+}
+
+.auth-header h2 {
+  color: #000000;
+  font-size: 1.5rem;
+  font-weight: 400;
+  margin: 0;
+}
+
+.tagline {
+  color: #000000;
+  font-size: 1rem;
+  margin: 0.5rem 0 1rem 0;
+}
+
+.user-type-selection {
+  margin: 1rem 0;
+}
+
+.radio-group {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.radio-label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+  color: #000000;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.radio-label input[type="radio"] {
+  display: none;
+}
+
+.radio-label .radio-custom {
+  width: 16px;
+  height: 16px;
+  border: 2px solid #e1e5e9;
+  border-radius: 50%;
+  position: relative;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.radio-label input[type="radio"]:checked+.radio-custom {
+  border-color: #4ec1ef;
+  background: #4ec1ef;
+}
+
+.radio-label input[type="radio"]:checked+.radio-custom::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 6px;
+  height: 6px;
+  background: white;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.required {
+  color: #e74c3c;
+  font-weight: bold;
+}
+
+.verification-message {
+  color: #000000;
+  font-size: 1rem;
+  margin: 1rem 0;
+  line-height: 1.4;
+}
+
+.verification-code-container {
+  margin: 2rem 0;
+}
+
+.code-inputs {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+  margin: 1rem 0;
+}
+
+.code-input {
+  width: 50px;
+  height: 50px;
+  border: 2px solid #e1e5e9;
+  border-radius: 8px;
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: 600;
+  transition: border-color 0.3s ease;
+}
+
+.code-input:focus {
+  outline: none;
+  border-color: #4ec1ef;
+}
+
+.code-input.error {
+  border-color: #e74c3c;
+}
+
+.resend-link {
+  background: none;
+  border: none;
+  color: #000;
+  text-decoration: underline;
+  cursor: pointer;
+  font-size: 0.9rem;
+  padding: 0;
+  transition: color 0.3s ease;
+}
+
+.resend-link:hover {
+  color: #000000;
+}
+
+.back-link {
+  margin-bottom: 1rem;
+}
+
+.back-button {
+  color: #4ec1ef;
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: color 0.3s ease;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.back-button:hover {
+  color: #4ec1ef;
+  text-decoration: none;
+}
+
+/* File Upload Styles */
+.file-upload-wrapper {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+}
+
+.file-input {
+  position: absolute;
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+
+.file-upload-label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem;
+  border: 2px dashed #4ec1ef;
+  border-radius: 8px;
+  background: #f8f9fa;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.file-upload-label:hover {
+  background: #e7f3ff;
+  border-color: #4ec1ef;
+}
+
+.file-upload-icon {
+  font-size: 1.2rem;
+  color: #4ec1ef;
+}
+
+.file-upload-text {
+  color: #000000;
+  font-size: 0.9rem;
+}
+
+.file-input.error+.file-upload-label {
+  border-color: #e74c3c;
+}
+
+/* Multi-Select Styles */
+.multi-select-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.multi-select-wrapper select {
+  width: 100%;
+  text-align: left !important;
+  margin: 0;
+  padding: 0.75rem;
+  border: 2px solid #e1e5e9;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+  box-sizing: border-box;
+}
+
+.selected-tags {
+  /* margin-top: 0.5rem; */
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  justify-content: flex-start;
+}
+
+.tag {
+  background: #4ec1ef;
+  color: white;
+  padding: 0.25rem 0.5rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.tag button {
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  font-size: 0.9rem;
+  padding: 0;
+  margin: 0;
+  font-weight: bold;
+}
+
+.tag button:hover {
+  opacity: 0.8;
+}
+
+/* Hourly Rate Styles */
+.hourly-rate-section {
+  margin-bottom: 1rem;
+}
+
+.rate-label {
+  font-size: 0.9rem;
+  color: #000000;
+  margin-bottom: 0.5rem;
+}
+
+.rate-input {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.currency {
+  position: absolute;
+  left: 0.75rem;
+  color: #000000;
+  font-size: 1rem;
+  z-index: 1;
+}
+
+.rate-input input {
+  padding-left: 2rem;
+}
+
+/* Work Model Radio Styles */
+.work-model {
+  display: flex;
+  gap: 1.5rem;
+  margin-top: 0.5rem;
+}
+
+.cert-label {
+  font-size: 0.9rem;
+  color: #000000;
+  margin-bottom: 0.5rem;
+}
+
+/* Success/Rejection Page Styles */
+.success-page-content,
+.rejection-page-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 2rem;
+  min-height: 60vh;
+  justify-content: center;
+}
+
+.success-header,
+.rejection-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.success-logo,
+.rejection-logo {
+  width: 80px;
+  height: 80px;
+}
+
+.success-header h1,
+.rejection-header h1 {
+  font-size: 2rem;
+  color: #000000;
+  margin: 0;
+}
+
+.success-message-section,
+.rejection-message-section {
+  text-align: center;
+  max-width: 400px;
+}
+
+.success-title {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #000000;
+  margin-bottom: 1rem;
+}
+
+.rejection-title {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #000000;
+  margin-bottom: 1rem;
+}
+
+.success-details {
+  margin-bottom: 2rem;
+}
+
+.rejection-details {
+  margin-bottom: 2rem;
+}
+
+.success-subtitle {
+  font-size: 1.1rem;
+  color: #000000;
+  margin-bottom: 0.5rem;
+}
+
+.success-description,
+.rejection-description {
+  font-size: 1rem;
+  color: #000000;
+  line-height: 1.5;
+}
+
+.success-button,
+.rejection-button {
+  background: #4ec1ef;
+  color: white;
+  border: none;
+  padding: 0.75rem 2rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s ease;
+  margin-top: 1rem;
+}
+
+.success-button:hover,
+.rejection-button:hover {
+  background: #4ec1ef;
+}
+
+/* Mobile Responsive for New Components */
+@media (max-width: 768px) {
+  .work-model {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .success-page-content,
+  .rejection-page-content {
+    padding: 1rem;
+  }
+
+  .success-title,
+  .rejection-title {
+    font-size: 1.5rem;
+  }
+
+  .success-header h1,
+  .rejection-header h1 {
+    font-size: 1.5rem;
+  }
+
+  .success-logo,
+  .rejection-logo {
+    width: 60px;
+    height: 60px;
+  }
+
+  .file-upload-label {
+    padding: 0.5rem;
+  }
+
+  .selected-tags {
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .rate-input {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .currency {
+    position: static;
+    margin-bottom: 0.5rem;
+  }
+
+  .rate-input input {
+    padding-left: 0.75rem;
+  }
+
+  .work-model {
+    gap: 0.5rem;
+  }
+
+  .radio-label {
+    font-size: 0.8rem;
+  }
+}
+
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding-bottom: 1rem;
+}
+
+.form-row {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-width: 0;
+  /* Prevent overflow */
+  word-wrap: break-word;
+}
+
+.form-group label {
+  font-weight: 600;
+  color: #000000;
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+  text-align: left;
+}
+
+.form-group input,
+.form-group select {
+  padding: 0.75rem;
+  border: 2px solid #e1e5e9;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+  text-align: left;
+  width: 100%;
+  box-sizing: border-box;
+  min-width: 0;
+  /* Prevent overflow */
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  outline: none;
+  border-color: #4ec1ef;
+}
+
+.form-group input.error,
+.form-group select.error {
+  border-color: #e74c3c;
+}
+
+.error-message {
+  color: #e74c3c;
+  font-size: 0.85rem;
+  margin-top: 0.25rem;
+}
+
+.error-message.general-error {
+  background: #ffeaea;
+  border: 1px solid #e74c3c;
+  border-radius: 6px;
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+
+.success-message {
+  background: #eafaf1;
+  border: 1px solid #27ae60;
+  border-radius: 6px;
+  padding: 0.75rem;
+  margin-bottom: 1rem;
+  text-align: center;
+  color: #27ae60;
+}
+
+.auth-button {
+  background: #4ec1ef;
+  color: white;
+  border: none;
+  padding: 1rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  margin-top: 1.5rem;
+}
+
+.auth-button:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(135, 206, 235, 0.3);
+}
+
+.auth-button:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.auth-links {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1rem;
+  font-size: 0.9rem;
+}
+
+.auth-links a {
+  color: #000;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.auth-links a:hover {
+  color: #000000;
+  text-decoration: underline;
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .auth-form-section {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
+  .auth-form-section>* {
+    max-width: 450px;
+  }
+
+  .auth-header h1 {
+    font-size: 2.2rem;
+  }
+
+  .auth-header h2 {
+    font-size: 1.4rem;
+  }
+
+  .taalos-logo {
+    width: 75px;
+    height: 75px;
+  }
+}
+
+@media (max-width: 768px) {
+  .auth-content {
+    flex-direction: column;
+    min-height: auto;
+  }
+
+  /* Hide image completely on small screens */
+  .auth-image {
+    display: none;
+  }
+
+  /* Form takes full width when image is hidden */
+  .auth-form-section {
+    width: 100%;
+    margin-left: 0;
+    padding: 1.5rem;
+    padding-top: 2rem;
+    justify-content: flex-start;
+    min-height: 100vh;
+  }
+
+  .auth-form-section>* {
+    max-width: 100%;
+  }
+
+  .header-with-logo {
+    justify-content: center;
+  }
+
+  .auth-header {
+    text-align: center;
+    margin-bottom: 1.5rem;
+  }
+
+  .auth-header h1 {
+    font-size: 2rem;
+  }
+
+  .auth-header h2 {
+    font-size: 1.3rem;
+  }
+
+  .tagline {
+    font-size: 0.9rem;
+  }
+
+  /* Stack form fields vertically */
+  .form-row {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .form-group {
+    flex: none;
+    width: 100%;
+  }
+
+  /* Improve form field sizing on mobile */
+  .form-group input,
+  .form-group select {
+    padding: 0.75rem;
+    font-size: 1rem;
+    min-height: 48px;
+    /* Ensure touch-friendly size */
+  }
+
+  .auth-links {
+    flex-direction: column;
+    gap: 0.5rem;
+    text-align: center;
+  }
+
+  .code-inputs {
+    gap: 0.3rem;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .code-input {
+    width: 40px;
+    height: 40px;
+    font-size: 1rem;
+  }
+
+  .taalos-logo {
+    width: 60px;
+    height: 60px;
+  }
+
+  .user-type-selection {
+    margin: 0.5rem 0;
+  }
+
+  .radio-group {
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+  }
+
+  /* Enhanced work model radio buttons for mobile */
+  .work-model {
+    flex-direction: column;
+    gap: 1rem;
+    align-items: flex-start;
+  }
+
+  /* Improve file upload on mobile */
+  .file-upload-label {
+    padding: 0.75rem;
+    text-align: center;
+    min-height: 48px;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* Better tag display on mobile */
+  .selected-tags {
+    gap: 0.25rem;
+  }
+
+  .tag {
+    font-size: 0.8rem;
+    padding: 0.25rem 0.5rem;
+  }
+
+  /* Improve rate input on mobile */
+  .rate-input {
+    position: relative;
+  }
+
+  .currency {
+    position: absolute;
+    left: 0.75rem;
+    color: #000000;
+    font-size: 1rem;
+    z-index: 1;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .rate-input input {
+    padding-left: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .auth-container {
+    padding: 0;
+  }
+
+  .auth-form-section {
+    padding: 1rem;
+    min-height: 100vh;
+  }
+
+  .auth-header h1 {
+    font-size: 1.8rem;
+  }
+
+  .auth-header h2 {
+    font-size: 1.2rem;
+  }
+
+  .code-inputs {
+    gap: 0.2rem;
+  }
+
+  .code-input {
+    width: 35px;
+    height: 35px;
+    font-size: 0.9rem;
+  }
+
+  .taalos-logo {
+    width: 50px;
+    height: 50px;
+  }
+
+  .form-group input,
+  .form-group select {
+    padding: 0.6rem;
+    font-size: 0.9rem;
+    min-height: 44px;
+  }
+
+  .auth-button {
+    padding: 0.8rem;
+    font-size: 0.9rem;
+    min-height: 48px;
+  }
+
+  .radio-group {
+    gap: 1.5rem;
+  }
+
+  .radio-label {
+    font-size: 0.85rem;
+  }
+
+  .header-with-logo {
+    gap: 0.5rem;
+  }
+
+  /* Stack rate input elements on very small screens */
+  .rate-input {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .currency {
+    position: static;
+    margin-bottom: 0.5rem;
+    transform: none;
+    text-align: left;
+  }
+
+  .rate-input input {
+    padding-left: 0.75rem;
+  }
+
+  /* Improve work model layout on small screens */
+  .work-model {
+    gap: 0.75rem;
+  }
+
+  /* Better tag wrapping on small screens */
+  .selected-tags {
+    gap: 0.2rem;
+  }
+
+  .tag {
+    font-size: 0.75rem;
+    padding: 0.2rem 0.4rem;
+  }
+
+  /* Improve file upload text wrapping */
+  .file-upload-text {
+    font-size: 0.8rem;
+    word-break: break-word;
+  }
+}
+
+@media (min-width: 1025px) {
+  .auth-form-section {
+    padding-left: 5rem;
+    padding-right: 3rem;
+  }
+
+  .auth-form-section>* {
+    max-width: 500px;
+  }
+
+  .auth-header h1 {
+    font-size: 2.8rem;
+  }
+
+  .auth-header h2 {
+    font-size: 1.6rem;
+  }
+
+  .taalos-logo {
+    width: 100px;
+    height: 100px;
+  }
+
+  .form-group input,
+  .form-group select {
+    padding: 0.875rem;
+    font-size: 1.05rem;
+  }
+
+  .auth-button {
+    padding: 1.125rem;
+    font-size: 1.05rem;
+  }
+}
+
+/* Enhanced unauthorized page responsiveness */
+@media (max-width: 768px) {
+  .unauthorized-container {
+    padding: 1rem;
+  }
+
+  .unauthorized-content {
+    grid-template-columns: 1fr;
+    border-radius: 15px;
+    min-height: auto;
+  }
+
+  .unauthorized-visual {
+    padding: 2rem;
+    min-height: 300px;
+  }
+
+  .error-code {
+    font-size: 4rem;
+  }
+
+  .unauthorized-details {
+    padding: 2rem;
+  }
+
+  .error-title {
+    font-size: 2rem;
+  }
+
+  .error-subtitle {
+    font-size: 1.1rem;
+  }
+
+  .action-buttons {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .primary-button,
+  .secondary-button {
+    width: 100%;
+    min-width: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .unauthorized-container {
+    padding: 0.5rem;
+  }
+
+  .unauthorized-visual {
+    padding: 1.5rem;
+    min-height: 250px;
+  }
+
+  .error-icon-container {
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .error-code {
+    font-size: 3rem;
+  }
+
+  .unauthorized-details {
+    padding: 1.5rem;
+  }
+
+  .error-title {
+    font-size: 1.8rem;
+  }
+
+  .logo-section {
+    justify-content: center;
+    margin-bottom: 1.5rem;
+  }
+
+  .company-name {
+    font-size: 1.3rem;
+  }
+
+  .unauthorized-logo {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+/* Enhanced success/rejection page responsiveness */
+@media (max-width: 768px) {
+
+  .success-page-content,
+  .rejection-page-content {
+    padding: 1.5rem;
+    min-height: 50vh;
+  }
+
+  .success-title,
+  .rejection-title {
+    font-size: 1.5rem;
+  }
+
+  .success-header h1,
+  .rejection-header h1 {
+    font-size: 1.5rem;
+  }
+
+  .success-logo,
+  .rejection-logo {
+    width: 60px;
+    height: 60px;
+  }
+
+  .success-message-section,
+  .rejection-message-section {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+
+  .success-page-content,
+  .rejection-page-content {
+    padding: 1rem;
+  }
+
+  .success-title,
+  .rejection-title {
+    font-size: 1.3rem;
+  }
+
+  .success-header h1,
+  .rejection-header h1 {
+    font-size: 1.3rem;
+  }
+
+  .success-logo,
+  .rejection-logo {
+    width: 50px;
+    height: 50px;
+  }
+
+  .success-description,
+  .rejection-description {
+    font-size: 0.9rem;
+  }
+}
+
+/* Additional overflow prevention and text wrapping */
+* {
+  box-sizing: border-box;
+}
+
+.auth-container,
+.auth-card,
+.auth-content,
+.auth-form-section,
+.form-group,
+.multi-select-wrapper {
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+}
+
+/* Prevent horizontal scrolling */
+body,
+html {
+  overflow-x: hidden;
+}
+
+.auth-container {
+  max-width: 100vw;
+}
+
+/* Ensure buttons are touch-friendly on mobile */
+@media (max-width: 768px) {
+
+  .auth-button,
+  .success-button,
+  .rejection-button,
+  .primary-button,
+  .secondary-button {
+    min-height: 48px;
+    touch-action: manipulation;
+  }
+
+  .radio-custom {
+    min-width: 20px;
+    min-height: 20px;
+  }
+
+  .code-input {
+    min-height: 44px;
+    touch-action: manipulation;
+  }
+}
+
+/* Rejection Reason Styles */
+.rejection-reason-section {
+  background: #f8f9fa;
+  border: 1px solid #e9ecef;
+  border-radius: 8px;
+  padding: 16px;
+  margin: 20px 0;
+}
+
+.rejection-reason-title {
+  color: #495057;
+  font-size: 14px;
+  font-weight: 600;
+  margin: 0 0 8px 0;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.rejection-reason-content {
+  color: #dc3545;
+  font-size: 14px;
+  line-height: 1.5;
+  background: white;
+  padding: 12px;
+  border-radius: 4px;
+  border-left: 4px solid #dc3545;
+  margin: 0;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+.rejection-reason-loading {
+  color: #6c757d;
+  font-style: italic;
+  padding: 20px 0;
+  text-align: center;
+}
+
+.rejection-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+
+.unauthorized-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  min-height: 100vh;
+  background: #f8f9fa;
+}
+
+.unauthorized-card {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  max-width: 900px;
+  width: 100%;
+}
+
+.unauthorized-visual {
+  background: linear-gradient(135deg, #4ec1ef, #82d4f5);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 3rem 2rem;
+  color: white;
+}
+
+.error-icon-container {
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 50%;
+  padding: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.error-code {
+  font-size: 4.5rem;
+  font-weight: bold;
+}
+
+.unauthorized-details {
+  padding: 3rem 2rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.logo-section {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+}
+
+.unauthorized-logo {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+}
+
+.company-name {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #4ec1ef;
+}
+
+.error-title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: #000;
+}
+
+.error-subtitle {
+  font-size: 1.2rem;
+  font-weight: 400;
+  margin-bottom: 1.5rem;
+  color: #555;
+}
+
+.error-description {
+  margin-bottom: 0.75rem;
+  line-height: 1.5;
+  color: #333;
+}
+
+.error-reasons {
+  list-style: disc;
+  padding-left: 1.25rem;
+  color: #444;
+  margin-bottom: 2rem;
+}
+
+.action-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.primary-button {
+  background: #4ec1ef;
+  color: white;
+  border: none;
+  padding: 0.75rem 1.25rem;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: background 0.2s ease;
+}
+
+.primary-button:hover {
+  background: #3bb0de;
+}
+
+.secondary-button {
+  background: transparent;
+  color: #4ec1ef;
+  border: 2px solid #4ec1ef;
+  padding: 0.75rem 1.25rem;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: all 0.2s ease;
+}
+
+.secondary-button:hover {
+  background: #e7f7fd;
+}
+
+.help-section {
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.help-link {
+  color: #4ec1ef;
+  font-weight: 500;
+  text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .unauthorized-card {
+    grid-template-columns: 1fr;
+    border-radius: 12px;
+  }
+
+  .unauthorized-visual {
+    padding: 2rem 1rem;
+  }
+
+  .unauthorized-details {
+    padding: 2rem 1.5rem;
+  }
+
+  .help-section {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .error-code {
+    font-size: 3.5rem;
+  }
+
+  .error-title {
+    font-size: 1.6rem;
+  }
+
+  .error-subtitle {
+    font-size: 1rem;
+  }
+}

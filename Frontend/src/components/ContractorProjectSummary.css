@@ -1,0 +1,419 @@
+/* Contractor Project Summary Styles */
+/* Matches the reference images exactly */
+
+.project-summary-page {
+  padding: 32px;
+  background-color: f8f9fa;
+  min-height: 100vh;
+}
+
+/* Header Section */
+.project-summary-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 32px;
+}
+
+.project-summary-header h1 {
+  font-size: 28px;
+  color: #2c3e50;
+  margin: 0;
+  font-weight: 400;
+}
+
+.header-bold {
+  font-weight: 700;
+}
+
+.header-actions {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.back-btn {
+  background: none;
+  border: none;
+  color: #3498db;
+  font-size: 16px;
+  cursor: pointer;
+  padding: 8px 16px;
+  border-radius: 4px;
+  transition: all 0.2s;
+}
+
+.back-btn:hover {
+  background-color: #ecf0f1;
+}
+
+.chat-btn {
+  background: linear-gradient(180deg, #999BA1 0%, #5C5C5C 100%);
+  color: white;
+  border: none;
+  padding: 1rem;
+  box-shadow: 0 2px 3px 0 #D9D9D9;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.2s;
+  margin-bottom: 1rem;
+}
+
+.chat-btn:hover {
+  background-color: #6c7b7d;
+}
+
+.submit-invoice-btn {
+  background: linear-gradient(180deg, #59C7F7 0%, #33b1dd 100%);
+  color: white;
+  border: none;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 3px 0 #D9D9D9;
+  cursor: pointer;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+
+.submit-invoice-btn:hover {
+  background-color: #2980b9;
+}
+
+/* Main Content Card */
+.project-summary-card {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  padding: 32px;
+  max-width: 1200px;
+}
+
+.project-summary-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+}
+
+/* Left Column - Project Details */
+.project-details-column {
+  /* border-right: 1px solid #e1e8ed;
+  padding-right: 32px; */
+}
+
+.project-name-section {
+  margin-bottom: 32px;
+}
+
+.project-name-label {
+  font-size: 14px;
+  color: #7f8c8d;
+  margin-bottom: 8px;
+  text-align: left;
+}
+
+.project-name-with-status {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+}
+
+.project-summary-page .project-name {
+  font-size: 24px;
+  font-weight: 600;
+  color: #2c3e50;
+  margin: 0;
+}
+
+/* Status Badges */
+.project-summary-page .status-badge {
+  padding: 4px 12px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+
+.project-summary-page .status-badge-active {
+  background-color: #d4edda;
+  color: #155724;
+}
+
+.project-summary-page .status-badge-closed {
+  background-color: #f8d7da;
+  color: #721c24;
+}
+
+.project-summary-page .status-badge-pending {
+  background-color: #fff3cd;
+  color: #856404;
+}
+
+.project-summary-page .status-badge-default {
+  background-color: #e2e6ea;
+  color: #495057;
+}
+
+/* Project Info List */
+.project-info-list {
+  margin-bottom: 32px;
+}
+
+.info-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 0;
+  border-bottom: 1px solid #f1f2f6;
+}
+
+.h-client-project-view .info-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 0;
+  border-bottom: 1px solid #f1f2f6;
+}
+
+
+
+.info-row:last-child {
+  border-bottom: none;
+}
+
+.info-label {
+  font-size: 14px;
+  color: #7F8C8D;
+  font-weight: 500;
+  text-align: start;
+}
+
+.info-value {
+  font-size: 14px;
+  color: #2C3E50;
+  font-weight: 400;
+  text-align: start;
+}
+
+/* Client Profile Section */
+.client-profile-section {
+  border-top: 1px solid #e1e8ed;
+  padding-top: 24px;
+}
+
+.client-label {
+  font-size: 14px;
+  color: #7f8c8d;
+  margin-bottom: 12px;
+  font-weight: 500;
+  text-align: left;
+}
+
+.client-profile {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.client-avatar {
+    width: 35px;
+    height: 35px;
+    border-radius: 8%;
+  background-color: #3498db;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.client-name {
+  font-size: 1.7rem;
+  color: #2c3e50;
+  font-weight: 600;
+}
+
+.h-contractor .client-name {
+      font-size: 0.9rem !important;
+  
+}
+
+/* Right Column - Description & Requirements */
+.project-requirements-column {
+  padding-left: 16px;
+}
+
+.project-description-section {
+  margin-bottom: 32px;
+}
+
+.section-title {
+  font-size: 18px;
+  color: #2c3e50;
+  margin-bottom: 16px;
+  font-weight: 600;
+  text-align: start;
+}
+
+.title-bold {
+  font-weight: 700;
+}
+
+.project-description {
+  font-size: 14px;
+  line-height: 1.6;
+  margin: 0;
+  color: #7f8c8d;
+  text-align: start;
+  padding: 0;
+}
+
+/* Requirements Section */
+.requirements-section {
+  margin-bottom: 24px;
+}
+
+.requirement-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.requirement-label {
+  font-size: 14px;
+  color: #7f8c8d;
+  font-weight: 500;
+  padding-top: 4px;
+}
+
+.requirement-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.requirement-badge {
+  background-color: #e9ecef;
+  color: #495057;
+  padding: 4px 12px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.requirement-badge.no-data {
+  background-color: #f8f9fa;
+  color: #6c757d;
+  font-style: italic;
+  text-transform: none;
+}
+
+/* Loading and Error States */
+.loading {
+  text-align: center;
+  padding: 48px;
+  color: #7f8c8d;
+  font-size: 16px;
+}
+
+.error-message {
+  text-align: center;
+  color: #e74c3c;
+}
+
+.error-message h3 {
+  color: #e74c3c;
+  margin-bottom: 16px;
+}
+
+.retry-btn {
+  background-color: #3498db;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 6px;
+  font-size: 14px;
+  cursor: pointer;
+  margin-top: 16px;
+  transition: all 0.2s;
+}
+
+.retry-btn:hover {
+  background-color: #2980b9;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .project-summary-content {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+
+  .contractor-my-projects {
+    flex-direction: column;
+  }
+
+  .project-details-column {
+    border-right: none;
+    padding-right: 0;
+    border-bottom: 1px solid #e1e8ed;
+    padding-bottom: 32px;
+  }
+
+  .project-requirements-column {
+    padding-left: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .project-summary-page {
+    padding: 16px;
+  }
+
+  .client-name {
+    font-size: 0.9rem;
+    font-weight: 500;
+  }
+
+  .project-summary-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+
+  .header-actions {
+    align-self: stretch;
+    justify-content: flex-start;
+  }
+
+  .project-summary-card {
+    padding: 24px;
+  }
+
+  .project-name-with-status {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .requirement-row {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .requirement-label {
+    min-width: auto;
+  }
+}
+
+.contractor-my-projects {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}

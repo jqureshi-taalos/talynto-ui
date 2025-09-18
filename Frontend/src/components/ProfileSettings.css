@@ -1,0 +1,357 @@
+.x-profile-settings {
+    /* background-color: aqua; */
+    text-align: start;
+}
+
+.x-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.x-profile-header {
+    height: 10rem;
+    width: 100%;
+    background: linear-gradient(180deg, #59C7F7 0%, #33B1DD 100%);
+    border-radius: 0.9;
+    position: relative;
+    margin-bottom: 10rem;
+}
+
+.x-profile-title {
+    position: absolute;
+    top: 7rem;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+.x-avatar-and-name {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: 2rem;
+}
+
+.x-email-and-location {
+    display: flex;
+    gap: 2rem;
+}
+
+.x-email-and-location div {
+    display: flex;
+    color: #7A7A7A;
+    align-items: center;
+    gap: 0.8rem;
+    text-transform: uppercase;
+}
+
+.x-name {
+    margin-top: 2rem;
+}
+
+.x-title-font {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.x-detail-value {
+    display: flex;
+    gap: 1rem;
+}
+
+.x-badge {
+    color: #7A7A7A;
+    background: #ECECEC;
+    border-radius: 8%;
+    padding: 0.2rem 1rem;
+    display: flex;
+    align-items: center;
+    text-transform: uppercase;
+}
+
+.x-badge input,
+.x-badge input:focus,
+.x-badge input:active,
+.x-badge input:target {
+    /* border: none;
+    border-color: transparent;
+    outline: none;
+    width: fit-content !important;
+    background-color: transparent; */
+
+    width: auto;
+    min-width: 0;
+    /* prevent browser default expansion */
+    flex: 1 1 auto;
+    /* allow shrinking inside flex */
+    border: none;
+    outline: none;
+    background: transparent;
+    /* so it looks like text inside badge */
+    box-sizing: border-box;
+}
+
+.x-eligibility-badge {
+    color: #4EC1EF;
+    background: #E5F6FE;
+    width: 50%;
+    border-radius: 8%;
+    display: flex;
+    align-items: center;
+    text-transform: uppercase;
+}
+
+
+.x-profile-details {}
+
+
+.x-profile-details-holder {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.x-profile-client-details-holder {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 100%;
+    gap: 1rem;
+}
+
+/* Make children 50% only inside this parent */
+.x-profile-client-details-holder>div {
+    flex: 0 0 49%;
+    max-width: 49%;
+}
+
+.x-detail {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.9rem;
+    background: #fff;
+    width: 100%;
+    padding: 1rem 2.5rem;
+    border-radius: 3%;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.x-detail.edit,
+.x-detail.edit input,
+.x-detail.edit .profile-select {
+    background: transparent !important;
+}
+
+
+
+/* Utils */
+.x-loading-spinner {
+    width: 0.9rem;
+    height: 0.9rem;
+    border: 4px solid #f3f3f3;
+    border-top: 4px solid #4ec1ef;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.x-button {
+    background: linear-gradient(180deg, #59C7F7 0%, #33B1DD 100%);
+    color: #FFFFFF;
+    border-radius: 8%;
+    border: none;
+    padding: 0.6rem 1.5rem;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    border-bottom: 2px solid transparent;
+    transition: all 0.2s;
+}
+
+.x-button.active {
+    color: #4EC1EF;
+    background: white;
+    box-shadow: 0 2px 3px 0 #D9D9D9;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+.x-button.cancel {
+    background: linear-gradient(180deg, #FF6B6B 0%, #E63946 100%);
+    color: #fff;
+    margin-right: 8px;
+}
+
+.x-button.cancel.active {
+    color: #E63946;
+    background: #fff;
+    box-shadow: 0 2px 3px 0 #FFD6D6;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+.x-resume-btn {
+    background: none;
+    border: none;
+    display: flex;
+    gap: 0.3rem;
+    color: #7a7a7a;
+    cursor: pointer;
+}
+
+.x-change-image {
+    background: linear-gradient(180deg, #59C7F7 0%, #33B1DD 100%) !important;
+    color: #fff !important;
+    border: none !important;
+}
+
+.x-security-and-deactivate-section,
+.x-security-and-deactivate-box {
+    display: flex;
+    justify-content: space-between;
+}
+
+.x-security-and-deactivate-section {
+    gap: 2rem;
+}
+
+.x-security-and-deactivate-box {
+    align-items: center;
+    gap: 1rem;
+}
+
+.x-button-secondary {
+    padding: 0.5rem 1rem;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.x-red {
+    background: #FC0E0E;
+}
+
+.x-blue {
+    background: #59C7F7;
+}
+
+.x-gray {
+    background: #7A7A7A;
+}
+
+.x-width-100 {
+    width: 100%;
+}
+
+.x-eligiblity-box {
+    padding: 2rem;
+}
+
+.x-profile-contractor-details-holder {
+    width: 50%;
+}
+
+
+/* ====== Responsive Styles ====== */
+
+/* Tablet (max-width: 1024px) */
+@media screen and (max-width: 1024px) {
+    .x-profile-title {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.35rem;
+        top: 1rem;
+    }
+
+    .x-profile-contractor-details-holder {
+        width: 100%;
+    }
+
+    .x-profile-client-details-holder {
+        flex-direction: column;
+    }
+
+    .x-profile-client-details-holder>div {
+        /* flex: 0 0 48%; */
+        /* max-width: 48%; */
+        flex-direction: column;
+    }
+
+    .x-security-and-deactivate-section,
+    .x-security-and-deactivate-box {
+        flex-direction: column;
+    }
+
+    .x-avatar-and-name {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0rem;
+    }
+
+    .x-email-and-location {
+        gap: 1rem;
+    }
+}
+
+/* Mobile (max-width: 768px) */
+@media screen and (max-width: 768px) {
+    .x-profile-title {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .x-profile-client-details-holder>div {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+
+    .x-detail {
+        padding: 1rem;
+    }
+
+    .x-button-parent {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .x-button {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+/* Small Mobile (max-width: 480px) */
+@media screen and (max-width: 480px) {
+    .x-title-font {
+        font-size: 1.5rem;
+    }
+
+    .x-email-and-location {
+        gap: 0.5rem;
+    }
+
+    .x-badge,
+    .x-eligibility-badge {
+        width: 100%;
+        justify-content: center;
+    }
+}
